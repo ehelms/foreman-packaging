@@ -14,7 +14,7 @@
 
 Name:   foreman
 Version: 1.13.0
-Release: 1%{?dotalphatag}%{?dist}
+Release: 2%{?dotalphatag}%{?dist}
 Summary:Systems Management web application
 
 Group:  Applications/System
@@ -916,6 +916,10 @@ if [ $1 -ge 1 ] ; then
 fi
 
 %changelog
+* Sun Oct 16 2016 Eric D Helms <ericdhelms@gmail.com> 1.13.0-2
+- Update foreman repos to point at Katello's EL6 location
+  (ericdhelms@gmail.com)
+
 * Wed Oct 05 2016 Dominic Cleal <dominic@cleal.org> 1.13.0-1
 - Release 1.13.0
 
