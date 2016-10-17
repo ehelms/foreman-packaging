@@ -14,7 +14,7 @@
 
 Name:   foreman
 Version: 1.13.0
-Release: 3%{?dotalphatag}%{?dist}
+Release: 4%{?dotalphatag}%{?dist}
 Summary:Systems Management web application
 
 Group:  Applications/System
@@ -916,6 +916,9 @@ if [ $1 -ge 1 ] ; then
 fi
 
 %changelog
+* Mon Oct 17 2016 Eric D Helms <ericdhelms@gmail.com> 1.13.0-4
+- Add Katello GPG key as foreman.gpg (ericdhelms@gmail.com)
+
 * Mon Oct 17 2016 Eric D Helms <ericdhelms@gmail.com> 1.13.0-3
 - Update foreman.repo to set gpgcheck and use Katello GPG key
   (ericdhelms@gmail.com)
