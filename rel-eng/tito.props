@@ -35,6 +35,7 @@ whitelist = foreman-bootloaders-redhat
   nodejs-diff
   nodejs-expose-loader
   nodejs-extract-text-webpack-plugin
+  nodejs-fbjs
   nodejs-file-loader
   nodejs-flux
   nodejs-ipaddr.js
@@ -228,6 +229,8 @@ whitelist = foreman
   nodejs-diff
   nodejs-expose-loader
   nodejs-extract-text-webpack-plugin
+  nodejs-extract-text-webpack-plugin
+  nodejs-fbjs
   nodejs-file-loader
   nodejs-flux
   nodejs-ipaddr.js
@@ -252,10 +255,12 @@ whitelist = foreman
   nodejs-seamless-immutable
   nodejs-select2
   nodejs-stats-webpack-plugin
+  nodejs-stats-webpack-plugin
   nodejs-style-loader
   nodejs-urijs
   nodejs-url-loader
   nodejs-uuid
+  nodejs-webpack
   nodejs-webpack
   puppet-agent-oauth
   puppet-agent-puppet-strings
@@ -284,13 +289,13 @@ whitelist = foreman
   rubygem-fog-vsphere
   rubygem-fog-xenserver
   rubygem-font-awesome-sass
+  rubygem-foreman_maintain
   rubygem-friendly_id
   rubygem-gettext_i18n_rails_js
   rubygem-google-api-client
   rubygem-gridster-rails
   rubygem-hammer_cli
   rubygem-hammer_cli_foreman
-  rubygem-foreman_maintain
   rubygem-hirb
   rubygem-hirb-unicode-steakknife
   rubygem-jquery_pwstrength_bootstrap_4
