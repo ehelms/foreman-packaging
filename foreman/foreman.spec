@@ -267,6 +267,8 @@ BuildRequires: npm(node-sass) >= 4.5.0
 BuildRequires: npm(node-sass) < 5.0.0
 BuildRequires: npm(prop-types) >= 15.5.9
 BuildRequires: npm(prop-types) < 16.0.0
+BuildRequires: npm(object-assign)
+BuildRequires: npm(symbol-observable)
 BuildRequires: npm(react) >= 15.1.0
 BuildRequires: npm(react) < 16.0.0
 BuildRequires: npm(react-bootstrap) >= 0.31.0
