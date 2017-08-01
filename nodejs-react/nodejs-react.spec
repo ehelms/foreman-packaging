@@ -73,8 +73,9 @@ npm install --cache-min Infinity --cache . --global-style true %{npm_name}@%{ver
 %install
 mkdir -p %{buildroot}%{nodejs_sitelib}/%{npm_name}
 cd node_modules/react
-cp -pfr LICENSE PATENTS README.md dist lib package.json react.js node_modules %{buildroot}%{nodejs_sitelib}/%{npm_name}
+cp -pfr LICENSE PATENTS README.md dist lib package.json react.js %{buildroot}%{nodejs_sitelib}/%{npm_name}
 cp -pf LICENSE PATENTS README.md ../../
+%nodejs_symlink_deps
 
 %files
 %{nodejs_sitelib}/%{npm_name}

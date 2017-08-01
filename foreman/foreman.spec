@@ -721,6 +721,8 @@ export BUNDLER_EXT_GROUPS="default assets"
 ln -s %{nodejs_sitelib} node_modules
 export NODE_ENV=production
 %{?scl:scl enable %{scl} "}
+ls -la node_modules/react
+ls -la node_modules/react/node_modules
 ls -la node_modules/
 webpack.js --bail --config config/webpack.config.js
 %{?scl:"}
