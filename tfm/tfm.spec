@@ -6,9 +6,9 @@
 %{?scl_package:%scl_package %scl}
 
 # Fallback to sclo-ror42 etc. when scldevel's not in the buildroot
-%{!?scl_ror:%global scl_ror sclo-ror42}
+%{!?scl_ror:%global scl_ror tfm-ror51}
 %{!?scl_prefix_ror:%global scl_prefix_ror %{scl_ror}-}
-%{!?scl_ruby:%global scl_ruby rh-ruby22}
+%{!?scl_ruby:%global scl_ruby rh-ruby24}
 %{!?scl_prefix_ruby:%global scl_prefix_ruby %{scl_ruby}-}
 
 # Do not produce empty debuginfo package.
@@ -18,8 +18,8 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 3.2
-Release: 10%{?dist}
+Version: 4.0
+Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/File
 Source0: README
@@ -222,8 +222,6 @@ for arg in "\$@"; do
 done
 scl enable %{scl_name} "bash \$TMP"
 EOF
-# compatibility symlink
-ln -s %{scl_name}-ruby %{buildroot}%{_root_bindir}/ruby193-ruby
 
 cat >> %{buildroot}%{_root_bindir}/%{scl_name}-rake << EOF
 #!/bin/bash
@@ -274,7 +272,6 @@ selinuxenabled && load_policy || :
 %{_mandir}/man7/%{scl_name}.*
 %attr(755,-,-) %{_root_bindir}/%{scl_name}-rake
 %attr(755,-,-) %{_root_bindir}/%{scl_name}-ruby
-%{_root_bindir}/ruby193-ruby
 
 %files runtime-assets
 %{_scl_scripts}/enable_assets
