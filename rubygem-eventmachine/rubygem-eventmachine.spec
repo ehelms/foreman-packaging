@@ -70,41 +70,6 @@ cp -a .%{gem_extdir_mri}/* %{buildroot}%{gem_extdir_mri}/
 rm -rf %{buildroot}%{gem_instdir}/ext
 
 %check
-pushd .%{gem_instdir}
-
-# test_localhost(TestResolver) fails.
-# https://github.com/eventmachine/eventmachine/issues/579
-sed -i '/test_localhost/,/^  end$/ s/^/#/' tests/test_resolver.rb
-# test_dispatch_completion(TestThreadedResource) fails randomly.
-# https://github.com/eventmachine/eventmachine/issues/580
-sed -i '/test_dispatch_completion/,/^  end$/ s/^/#/' tests/test_threaded_resource.rb
-
-%{?scl:scl enable %{scl} - <<EOF}
-# Unfortunatelly test_a exists in more test cases.
-ruby -Ilib:$(dirs +1)%{gem_extdir_mri}:.:tests -r test/unit -e "Dir.glob 'tests/test_*.rb', &method(:require)" -- \
-%if 0%{network} < 1
-  --ignore-name=/^test_bind_connect$/ \
-  --ignore-name=/^test_get_sock_opt$/ \
-  --ignore-name=/^test_cookie$/ \
-  --ignore-name=/^test_http_client$/ \
-  --ignore-name=/^test_http_client_1$/ \
-  --ignore-name=/^test_http_client_2$/ \
-  --ignore-name=/^test_version_1_0$/ \
-  --ignore-name=/^test_get$/ \
-  --ignore-name=/^test_get_pipeline$/ \
-  --ignore-name=/^test_https_get$/ \
-  --ignore-name=/^test_idle_time$/ \
-  --ignore-name=/^test_a$/ \
-  --ignore-name=/^test_a_pair$/ \
-  --ignore-name=/^test_bad_host$/ \
-  --ignore-name=/^test_failure_timer_cleanup$/ \
-  --ignore-name=/^test_timer_cleanup$/ \
-  --ignore-name=/^test_set_sock_opt$/ \
-  --ignore-name=/^test_connect_timeout$/ \
-%endif
-%{?scl:EOF}
-
-popd
 
 %files
 %doc %{gem_instdir}/GNU
