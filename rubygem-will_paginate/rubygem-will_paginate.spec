@@ -20,9 +20,7 @@ BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ror}rubygem(activesupport)
 BuildRequires: %{?scl_prefix_ror}rubygem(actionpack)
 BuildRequires: %{?scl_prefix_ror}rubygem(activerecord)
-BuildRequires: %{?scl_prefix_ror}rubygem(mocha)
 BuildRequires: %{?scl_prefix_ror}rubygem(sqlite3)
-BuildRequires: %{?scl_prefix_ror}rubygem(rspec)
 BuildRequires: %{?scl_prefix}rubygem(sequel)
 BuildArch:     noarch
 Provides:      %{?scl_prefix}rubygem(%{gem_name}) = %{version}
@@ -54,13 +52,6 @@ mkdir -p .%{gem_dir}
 mkdir -p %{buildroot}%{gem_dir}
 cp -a .%{gem_dir}/* \
         %{buildroot}%{gem_dir}/
-
-%check
-pushd .%{gem_instdir}
-#%{?scl:scl enable %{scl} "}
-#rspec spec
-#%{?scl:"}
-popd
 
 %files
 %defattr(-, root, root, -)
