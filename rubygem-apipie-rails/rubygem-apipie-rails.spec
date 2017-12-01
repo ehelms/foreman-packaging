@@ -71,7 +71,7 @@ cp -a .%{gem_dir}/* \
 %exclude %{gem_instdir}/.gitignore
 %exclude %{gem_instdir}/.rspec
 %exclude %{gem_instdir}/.travis.yml
-%exclude %{gem_instdir}/Gemfile.*
+%exclude %{gem_instdir}/Gemfile*
 
 %files doc
 %doc %{gem_docdir}
