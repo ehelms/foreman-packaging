@@ -25,7 +25,6 @@ BuildRequires: %{?scl_prefix_ruby}ruby-devel
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby
 BuildRequires: postgresql-server postgresql-devel
-BuildRequires: %{?scl_prefix_ror}rubygem(rspec)
 # Introduced in F17.
 Obsoletes: %{?scl_prefix}ruby(postgres) <= 0.7.9-2010.01.28.2
 Provides: %{?scl_prefix}rubygem(%{gem_name}) = %{version}
@@ -89,13 +88,6 @@ for file in `find %{buildroot}%{gem_instdir}/spec -type f ! -perm /a+x -name "*.
         && sed -i -e 's/^#!\/usr\/bin\/env spec/#!\/usr\/bin\/env rspec/' $file \
         && chmod -v 755 $file
 done
-
-%check
-pushd .%{gem_instdir}
-%{?scl:scl enable %{scl} "}
-#rspec spec
-%{?scl:"}
-popd
 
 %files
 %exclude %{gem_instdir}/.gemtest
