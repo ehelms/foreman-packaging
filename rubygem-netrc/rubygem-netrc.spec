@@ -17,7 +17,6 @@ Requires: %{?scl_prefix_ruby}ruby(rubygems)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby
-BuildRequires: %{?scl_prefix_ruby}rubygem(minitest)
 BuildArch: noarch
 Provides: %{?scl_prefix}rubygem(%{gem_name}) = %{version}
 %{?scl:Obsoletes: ruby193-rubygem-%{gem_name}}
@@ -48,13 +47,6 @@ Documentation for %{pkg_name}
 mkdir -p %{buildroot}%{gem_dir}
 cp -a .%{gem_dir}/* \
         %{buildroot}%{gem_dir}/
-
-%check
-pushd .%{gem_instdir}
-%{?scl:scl enable %{scl} - << \EOS}
-ruby -e 'Dir.glob "./test/**/test_*.rb", &method(:require)'
-%{?scl:EOS}
-popd
 
 %files
 %dir %{gem_instdir}
