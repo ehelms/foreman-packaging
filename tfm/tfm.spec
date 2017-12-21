@@ -91,6 +91,7 @@ Obsoletes: %{scl_prefix}rubygem-turbolinks < 2.5.3-4
 Obsoletes: %{scl_prefix}rubygem-underscore-rails < 1.8.3-5
 Obsoletes: %{scl_prefix}rubygem-uuid < 2.3.8-2
 Obsoletes: %{scl_prefix}rubygem-uuidtools < 2.1.3-6
+Obsoletes: %{scl_prefix}rubygem-quiet_assets
 
 %description runtime
 Package shipping essential scripts to work with %scl Software Collection.
