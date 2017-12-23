@@ -42,6 +42,7 @@ Requires: %{?scl_prefix}rubygem(fog-digitalocean) >= 0.3.0
 Requires: %{?scl_prefix}rubygem(fog-google) <= 0.1.0
 Requires: %{?scl_prefix}rubygem(fog-json)
 Requires: %{?scl_prefix}rubygem(fog-openstack)
+Requires: %{?scl_prefix}rubygem(fog-ovirt)
 Requires: %{?scl_prefix}rubygem(fog-rackspace)
 Requires: %{?scl_prefix}rubygem(fog-vsphere) >= 0.4.0
 Requires: %{?scl_prefix}rubygem(fog-xenserver)
@@ -61,6 +62,7 @@ BuildRequires: %{?scl_prefix}rubygem(fog-digitalocean) >= 0.3.0
 BuildRequires: %{?scl_prefix}rubygem(fog-google) <= 0.1.0
 BuildRequires: %{?scl_prefix}rubygem(fog-json)
 BuildRequires: %{?scl_prefix}rubygem(fog-openstack)
+BuildRequires: %{?scl_prefix}rubygem(fog-ovirt)
 BuildRequires: %{?scl_prefix}rubygem(fog-rackspace)
 BuildRequires: %{?scl_prefix}rubygem(fog-vsphere) >= 0.4.0
 BuildRequires: %{?scl_prefix}rubygem(fog-xenserver)
