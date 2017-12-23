@@ -121,7 +121,6 @@ whitelist = foreman-bootloaders-redhat
 
 [foreman-nightly-rhel7]
 disttag = .el7
-scl = tfm
 whitelist = foreman
   rubygem-algebrick
   rubygem-activerecord-session_store
@@ -205,6 +204,7 @@ whitelist = foreman
   rubygem-pg
   rubygem-po_to_json
   rubygem-powerbar
+  rubygem-quiet_assets
   rubygem-rabl
   rubygem-rack-jsonp
   rubygem-rails-i18n
@@ -243,6 +243,7 @@ whitelist = foreman
   rubygem-x-editable-rails
   tfm
   tfm-rubygem-rest-client
+scl = tfm
 
 [foreman-plugins-nightly-rhel7]
 disttag = .el7
