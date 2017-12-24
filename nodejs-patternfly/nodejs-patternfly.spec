@@ -13,7 +13,6 @@ BuildRequires: nodejs-packaging
 Requires: npm(bootstrap) >= 3.3.7
 Requires: npm(bootstrap) < 3.4.0
 Requires: npm(bootstrap-datepicker) >= 1.6.4
-Requires: npm(bootstrap-datepicker) < 1.7.0
 Requires: npm(bootstrap-sass) >= 3.3.7
 Requires: npm(bootstrap-sass) < 4.0.0
 Requires: npm(bootstrap-select) >= 1.12.2
