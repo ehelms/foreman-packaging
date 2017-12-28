@@ -312,7 +312,7 @@ BuildRequires: npm(extract-text-webpack-plugin) < 4.0.0
 BuildRequires: npm(ipaddr.js) >= 1.2.0
 BuildRequires: npm(ipaddr.js) < 1.3.0
 BuildRequires: npm(jquery) >= 2.2.4
-BuildRequires: npm(jquery) < 2.3.0
+BuildRequires: npm(jquery) < 4.3.0
 BuildRequires: npm(jquery-flot) >= 0.8.3
 BuildRequires: npm(jquery-flot) < 0.9.0
 BuildRequires: npm(jquery-ujs) >= 1.2.0
@@ -644,7 +644,7 @@ Requires: npm(extract-text-webpack-plugin) < 4.0.0
 Requires: npm(ipaddr.js) >= 1.2.0
 Requires: npm(ipaddr.js) < 1.3.0
 Requires: npm(jquery) >= 2.2.4
-Requires: npm(jquery) < 2.3.0
+Requires: npm(jquery) < 4.0.0
 Requires: npm(jquery-flot) >= 0.8.3
 Requires: npm(jquery-flot) < 0.9.0
 Requires: npm(jquery-ujs) >= 1.2.0
