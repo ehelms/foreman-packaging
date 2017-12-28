@@ -3,7 +3,7 @@
 
 Name: nodejs-%{npm_name}
 Version: 4.17.47
-Release: 1%{?dist}
+Release: 1.git.4467.f1ade9c%{?dist}
 Summary: A date/time picker component designed to work with Bootstrap 3 and Momentjs
 License: MIT
 Group: Development/Libraries
@@ -24,8 +24,6 @@ ExclusiveArch: %{nodejs_arches} noarch
 
 %prep
 %setup -q -n package
-%nodejs_fixdep moment-timezone
-%nodejs_fixdep moment
 
 %install
 mkdir -p %{buildroot}%{nodejs_sitelib}/%{npm_name}
