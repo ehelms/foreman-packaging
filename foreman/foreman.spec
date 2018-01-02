@@ -123,7 +123,7 @@ Requires: %{?scl_prefix}rubygem(dynflow) >= 0.8.25
 Requires: %{?scl_prefix}rubygem(dynflow) < 1.0
 Requires: %{?scl_prefix}rubygem(daemons)
 Requires: %{?scl_prefix}rubygem(get_process_mem)
-Requires: %{?scl_prefix}rubygem(where-or)
+Requires: %{?scl_prefix}rubygem(record_tag_helper)
 # facter
 Requires: %{?scl_prefix}rubygem(facter)
 # jsonp
@@ -209,7 +209,7 @@ BuildRequires: %{?scl_prefix}rubygem(dynflow) >= 0.8.25
 BuildRequires: %{?scl_prefix}rubygem(dynflow) < 1.0
 BuildRequires: %{?scl_prefix}rubygem(daemons)
 BuildRequires: %{?scl_prefix}rubygem(get_process_mem)
-BuildRequires: %{?scl_prefix}rubygem(where-or)
+BuildRequires: %{?scl_prefix}rubygem(record_tag_helper)
 # assets
 %if 0%{?scl:1}
 BuildRequires: %{scl}-runtime-assets >= 4
