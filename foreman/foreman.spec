@@ -231,6 +231,7 @@ BuildRequires: npm(babel-core) < 7.0.0
 #BuildRequires: npm(babel-eslint) < 7.0.0
 #BuildRequires: npm(babel-jest) >= 15.0.0
 #BuildRequires: npm(babel-jest) < 16.0.0
+BuildRequires: npm(isomorphic-fetch)
 BuildRequires: npm(babel-loader) >= 7.1.1
 BuildRequires: npm(babel-loader) < 8.0.0
 BuildRequires: npm(babel-plugin-transform-class-properties) >= 6.24.1
