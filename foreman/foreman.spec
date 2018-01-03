@@ -474,7 +474,7 @@ Meta package to install requirements for oVirt compute resource support.
 %package compute
 Summary: Foreman compute resource Fog dependencies
 Group:  Applications/System
-Requires: %{?scl_prefix}rubygem(fog) = 1.41.0
+Requires: %{?scl_prefix}rubygem(fog) = 1.42.0
 Requires: %{name} = %{version}-%{release}
 Obsoletes: foreman-compute < 1.8.0
 Obsoletes: foreman-fog < 1.0.0

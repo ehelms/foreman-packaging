@@ -20,11 +20,7 @@
 %{!?_httpd_modconfdir: %{expand: %%global _httpd_modconfdir %%{_sysconfdir}/httpd/conf.d}}
 %{!?_httpd_moddir:    %{expand: %%global _httpd_moddir    %%{_libdir}/httpd/modules}}
 
-%if 0%{?rhel} == 7 && 0%{!?scl:1}
 %global enable_check 0
-%else
-%global enable_check 1
-%endif
 
 Summary: Passenger Ruby web application server
 Name: %{?scl_prefix}rubygem-%{gem_name}
