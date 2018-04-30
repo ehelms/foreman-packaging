@@ -7,7 +7,7 @@
 Name: ansiblerole-insights-client
 Summary: Packaging of the insights-client Ansible role
 Version: 1.5
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: ASL 2.0
 
 Source0: https://github.com/%{repo_orgname}/%{repo_name}/archive/v%{version}.tar.gz#/%{role_name}-%{version}.tar.gz
@@ -38,5 +38,8 @@ cp -pR %{repo_name}-%{version} %{buildroot}%{_datadir}/ansible/roles/%{role_orgn
 %license %{repo_name}-%{version}/LICENSE
 
 %changelog
+* Mon Apr 30 2018 Eric D. Helms <ericdhelms@gmail.com> - 1.5-2
+- rebuilt
+
 * Thu Mar 15 2018 Gavin Romig-Koch <gavin@redhat.com> - 1.5-1
 - Initial release.  Based largely on the pattern of rhel-system-roles.spec
