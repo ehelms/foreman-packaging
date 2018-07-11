@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE variants PUBLIC "-//Red Hat, Inc.//DTD Variants info//EN" "variants.dtd">
+<variants>
+
+  <variant id="Foreman" name="Foreman" type="variant" has_optional="false">
+    <arches>
+      <arch>x86_64</arch>
+    </arches>
+    <groups>
+      <group>foreman</group>
+    </groups>
+  </variant>
+
+</variants>
