@@ -14,6 +14,13 @@ gpgkey=https://repos.fedorapeople.org/repos/pulp/pulp/GPG-RPM-KEY-pulp-2
 enabled=1
 gpgcheck=@PULP_GPG_CHECK@
 
+[pulpcore]
+name=Pulpcore Community Release for Katello
+baseurl=https://fedorapeople.org/groups/katello/releases/yum/@REPO_VERSION@/pulpcore/@DIST@/$basearch/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-foreman
+enabled=1
+gpgcheck=@REPO_GPGCHECK@
+
 # Candlepin RPMs as supported by Katello - This is a coordinated
 # copy of Candlepin's packages in order to ensure compatibility
 
