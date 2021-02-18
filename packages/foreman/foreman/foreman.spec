@@ -9,7 +9,7 @@
 %global scl_ruby_bin /usr/bin/%{?scl:%{scl_prefix}}ruby
 %global scl_rake /usr/bin/%{?scl:%{scl_prefix}}rake
 
-%global release 2
+%global release 3
 %global prereleasesource develop
 %global prerelease %{?prereleasesource}
 
@@ -671,6 +671,7 @@ Group:  Applications/System
 Requires: %{?scl_prefix}rubygem(puma) >= 5.1
 Requires: %{?scl_prefix}rubygem(puma) < 6.0
 # end specfile service Requires
+Requires: %{?scl_prefix}rubygem(puma-status)
 Requires: %{name} = %{version}-%{release}
 
 %description service
@@ -680,6 +681,7 @@ Meta Package to install requirements for Foreman service
 %{_unitdir}/%{name}.service
 %{_unitdir}/%{name}.socket
 %{_datadir}/%{name}/bundler.d/service.rb
+%{_sbindir}/%{name}-puma-status
 
 %description
 Foreman is aimed to be a Single Address For All Machines Life Cycle Management.
@@ -705,6 +707,7 @@ plugins required for Foreman to work.
   done
   # script content
   sed -ri 'sX/usr/bin/rakeX%{scl_rake}X' extras/dbmigrate script/foreman-rake
+  sed -i '$ i\source scl_source enable tfm' script/foreman-puma-status
 %endif
 # sidekiq service SELinux helper path update
 sed -i '/^ExecStart/ s|/usr/bin/sidekiq \(.\+\)$|%{_libexecdir}/%{name}/sidekiq-selinux \1|' extras/systemd/%{dynflow_sidekiq_service_name}.service
@@ -760,6 +763,7 @@ install -Dp -m0644 extras/systemd/%{dynflow_sidekiq_service_name}.service %{buil
 install -Dp -m0755 script/%{name}-debug %{buildroot}%{_sbindir}/%{name}-debug
 install -Dp -m0755 script/%{name}-rake %{buildroot}%{_sbindir}/%{name}-rake
 install -Dp -m0755 script/%{name}-tail %{buildroot}%{_sbindir}/%{name}-tail
+install -Dp -m0755 script/%{name}-puma-status %{buildroot}%{_sbindir}/%{name}-puma-status
 install -Dp -m0644 %{SOURCE3} %{buildroot}%{_sysconfdir}/logrotate.d/%{name}
 install -Dp -m0644 %{SOURCE4} %{buildroot}%{_sysconfdir}/cron.d/%{name}
 install -Dp -m0644 %{SOURCE5} %{buildroot}%{_tmpfilesdir}/%{name}.conf
@@ -1019,6 +1023,9 @@ exit 0
 %systemd_postun %{name}.socket
 
 %changelog
+* Thu Feb 18 2021 Eric D. Helms <ericdhelms@gmail.com> - 2.5.0-0.3.develop
+- Add foreman-puma-status support
+
 * Mon Feb 08 2021 Ondrej Prazak <oprazak@redhat.com> - 2.5.0-0.2.develop
 - Bump @theforeman/vendor
 
