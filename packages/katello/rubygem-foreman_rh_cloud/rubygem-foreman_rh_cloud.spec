@@ -9,7 +9,7 @@
 
 Name: %{?scl_prefix}rubygem-%{gem_name}
 Version: 3.0.17
-Release: 1%{?foremandist}%{?dist}
+Release: 2%{?foremandist}%{?dist}
 Summary: Connects Foreman with Red Hat Cloud services
 Group: Applications/Systems
 License: GPLv3
@@ -129,6 +129,9 @@ cp -a .%{gem_dir}/* \
 %{gem_instdir}/test
 
 %changelog
+* Mon Mar 15 2021 Eric D. Helms <ericdhelms@gmail.com> - 3.0.17-2
+- Rebuild for Ruby 2.7
+
 * Mon Feb 22 2021 Ron Lavi <1ronlavi@gmail.com> 3.0.17-1
 - Update to 3.0.17-1
 

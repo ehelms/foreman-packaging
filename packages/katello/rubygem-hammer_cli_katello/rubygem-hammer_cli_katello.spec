@@ -5,7 +5,7 @@
 %global gem_name hammer_cli_katello
 %global plugin_name katello
 
-%global release 1
+%global release 2
 %global prereleasesource pre.master
 %global prerelease %{?prereleasesource:.}%{?prereleasesource}
 
@@ -96,6 +96,9 @@ install -m 0644 .%{gem_instdir}/config/%{plugin_name}.yml \
 %{gem_instdir}/test
 
 %changelog
+* Mon Mar 15 2021 Eric D. Helms <ericdhelms@gmail.com> - 1.0.1-0.2.pre.master
+- Rebuild for Ruby 2.7
+
 * Thu Feb 18 2021 Ewoud Kohl van Wijngaarden <ewoud@kohlvanwijngaarden.nl> - 1.0.1-0.1.pre.master
 - Bump to 1.0.1
 
