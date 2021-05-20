@@ -4,7 +4,7 @@
 
 %global gem_name qpid_proton
 %global gem_require_name %{gem_name}
-%global qpid_version 0.33.0
+%global qpid_version 0.34.0
 
 Name: %{?scl_prefix}rubygem-%{gem_name}
 Version: %{qpid_version}
@@ -108,6 +108,9 @@ rm -rf gem_ext_test
 %{gem_instdir}/tests
 
 %changelog
+* Thu May 20 2021 Eric D. Helms <ericdhelms@gmail.com> - 0.34.0-2
+- Build 0.34.0
+
 * Tue Apr 06 2021 Eric D. Helms <ericdhelms@gmail.com> - 0.33.0-2
 - Rebuild for Ruby 2.7
 
