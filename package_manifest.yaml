@@ -654,6 +654,7 @@ foreman_plugin_packages:
     puppet-foreman_scap_client: {}
     puppetlabs-stdlib: {}
     python-pbr: {}
+    python-pexpect: {}
     rubygem-acts_as_list: {}
     rubygem-angular-rails-templates: {}
     rubygem-aws-eventstream: {}
