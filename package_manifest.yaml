@@ -653,6 +653,7 @@ foreman_plugin_packages:
       strategy: bundle
     puppet-foreman_scap_client: {}
     puppetlabs-stdlib: {}
+    python-daemon: {}
     python-pbr: {}
     python-pexpect: {}
     rubygem-acts_as_list: {}
