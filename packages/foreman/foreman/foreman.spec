@@ -4,7 +4,7 @@
 %global dynflow_sidekiq_service_name dynflow-sidekiq@
 %global rake /usr/bin/rake
 
-%global release 5
+%global release 6
 %global prereleasesource develop
 %global prerelease %{?prereleasesource}
 
@@ -302,7 +302,7 @@ BuildRequires: rubygem(po_to_json) >= 1.1
 BuildRequires: rubygem(po_to_json) < 2.0
 BuildRequires: rubygem(execjs) >= 1.4.0
 BuildRequires: rubygem(execjs) < 3.0
-BuildRequires: rubygem(uglifier) >= 1.0.3
+BuildRequires: rubygem(terser) >= 1.1
 BuildRequires: rubygem(sass-rails) >= 6.0
 BuildRequires: rubygem(sass-rails) < 7.0
 BuildRequires: rubygem(coffee-rails) >= 5.0.0
@@ -491,7 +491,7 @@ Requires: rubygem(po_to_json) >= 1.1
 Requires: rubygem(po_to_json) < 2.0
 Requires: rubygem(execjs) >= 1.4.0
 Requires: rubygem(execjs) < 3.0
-Requires: rubygem(uglifier) >= 1.0.3
+Requires: rubygem(terser) >= 1.1
 Requires: rubygem(sass-rails) >= 6.0
 Requires: rubygem(sass-rails) < 7.0
 Requires: rubygem(coffee-rails) >= 5.0.0
@@ -1012,6 +1012,9 @@ exit 0
 %systemd_postun %{name}.socket
 
 %changelog
+* Tue Nov 21 2023 Eric D. Helms <ericdhelms@gmail.com> - 3.9.0-0.6.develop
+- Use terser instead of uglifier
+
 * Thu Oct 26 2023 Ewoud Kohl van Wijngaarden <ewoud@kohlvanwijngaarden.nl> - 3.9.0-0.5.develop
 - Automatically depend on selinux package if needed
 
